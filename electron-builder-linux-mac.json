@@ -12,23 +12,8 @@
     "output": "./dist/"
   },
   "npmRebuild": false,
-  "publish": [
-    {
+  "publish": {
       "provider": "github"
-    }
-  ],
-  "win": {
-    "target": [
-      "nsis",
-      "portable",
-      "appx"
-    ]
-  },
-  "nsis": {
-    "perMachine": true
-  },
-  "portable": {
-    "artifactName": "${productName}-${version}-portable.${ext}"
   },
   "mac": {
   	"hardenedRuntime": true,
@@ -45,13 +30,14 @@
   "dmg": {
   },
   "linux": {
+  	"executableName": "drawio",
     "category": "Graphics",
     "maintainer": "JGraph <support@draw.io>",
+    "icon": "./build",
     "target": [
       "AppImage",
       "deb",
-      "rpm",
-      "snap"
+      "rpm"
     ]
   },
   "fileAssociations": [
